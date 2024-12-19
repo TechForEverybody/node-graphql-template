@@ -1,4 +1,22 @@
 {
+    "name": "node-graphql-backend",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "type": "module",
+    "scripts": {
+        "local": "nodemon index.ts",
+        "start": "node dist/index.js",
+        "lint": "eslint .",
+        "format-code": "npx prettier --write .",
+        "build": "npx tsc",
+        "gcp-build": "npx tsc",
+        "git-pre-commit": "eslint . &&npx prettier --write . && npm run build && git add . ",
+        "git-commit": "npm run git-pre-commit && git commit",
+        "build-cjs": "npx esbuild index.js  --bundle --outfile=/pkg/build.cjs --format=cjs --platform=node"
+    },
+    "author": "Shivkumar Chauhan",
+    "license": "MIT",
+    "description": "",
     "dependencies": {
         "@apollo/server": "^4.11.2",
         "cors": "^2.8.5",
@@ -15,23 +33,6 @@
         "typescript-eslint": "^8.18.1",
         "ws": "^8.18.0"
     },
-    "name": "node-graphql-backend",
-    "version": "1.0.0",
-    "main": "index.ts",
-    "type": "module",
-    "scripts": {
-        "local": "nodemon index.ts",
-        "start": "node dist/index.js",
-        "lint": "eslint .",
-        "format-code": "npx prettier --write .",
-        "build": "npx tsc",
-        "gcp-build": "npx tsc",
-        "git-pre-commit": "eslint . &&npx prettier --write . && npm run build && git add . ",
-        "git-commit": "npm run git-pre-commit && git commit"
-    },
-    "author": "Shivkumar Chauhan",
-    "license": "MIT",
-    "description": "",
     "devDependencies": {
         "@types/cors": "^2.8.17",
         "@types/express-session": "^1.18.1",

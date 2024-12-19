@@ -24,7 +24,6 @@
         "start": "node dist/index.js",
         "lint": "eslint .",
         "format-code": "npx prettier --write .",
-
         "build": "npx tsc",
         "gcp-build": "npx tsc",
         "git-pre-commit": "eslint . &&npx prettier --write . && npm run build && git add . ",

@@ -1,14 +1,10 @@
-import express from 'express';
-import { ROUTES } from './routes';
+import express from 'express'
+import { ROUTES } from './routes'
 
-
-
-const ExpressRouter = express.Router();
+const ExpressRouter = express.Router()
 
 ExpressRouter.get('/', (req, res) => {
-    res.render('index');
-});
+    res.render('index')
+})
 
-
-
-export default ExpressRouter;
+export default ExpressRouter

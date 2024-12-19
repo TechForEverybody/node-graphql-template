@@ -1,6 +1,12 @@
-import App from './src/App';
-import { serverConfiguration } from './node.config';
+import App from './src/App'
+import { serverConfiguration } from './node.config'
 
-App.listen(serverConfiguration.serverPort,serverConfiguration.serverHost, () => {
-    console.log(`Server listening at http://${serverConfiguration.serverHost}:${serverConfiguration.serverPort}`);
-});
+App.listen(
+    serverConfiguration.serverPort,
+    serverConfiguration.serverHost,
+    () => {
+        console.log(
+            `Server listening at http://${serverConfiguration.serverHost}:${serverConfiguration.serverPort}`
+        )
+    }
+)

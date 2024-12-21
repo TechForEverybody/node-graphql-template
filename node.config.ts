@@ -8,4 +8,4 @@ const serverConfiguration = {
     databaseUrl: process.env.DATABASE_URL || '',
 }
 
-export { serverConfiguration }
+export default serverConfiguration

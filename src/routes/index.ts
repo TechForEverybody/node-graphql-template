@@ -1,9 +1,8 @@
 import express from 'express'
-import { ROUTES } from './routes'
 
 const ExpressRouter = express.Router()
 
-ExpressRouter.get('/', (req, res) => {
+ExpressRouter.get('/', (_, res) => {
     res.render('index')
 })
 

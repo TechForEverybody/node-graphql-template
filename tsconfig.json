@@ -6,7 +6,7 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "target": "ESNext",
+        "target": "ES2022",
         "noImplicitAny": true,
         "moduleResolution": "node",
         "sourceMap": true,
@@ -25,5 +25,5 @@
             "*": ["node_modules/*"]
         }
     },
-    "include": ["./**/*"]
+    "include": ["./src/**/*"]
 }

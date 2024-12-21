@@ -12,7 +12,8 @@
         "gcp-build": "npx tsc",
         "git-pre-commit": "eslint . &&npx prettier --write . && npm run build && git add . ",
         "git-commit": "npm run git-pre-commit && git commit",
-        "build-cjs": "npx esbuild index.js  --bundle --outfile=/pkg/build.cjs --format=cjs --platform=node"
+        "build-webpack": "webpack --config webpack.config.js",
+        "run-webpack": "node pkg/build.js"
     },
     "author": "Shivkumar Chauhan",
     "license": "MIT",
@@ -48,7 +49,9 @@
         "@types/jsonwebtoken": "^9.0.7",
         "@types/node": "^22.10.2",
         "@types/ws": "^8.5.13",
-        "typescript": "^5.7.2"
+        "typescript": "^5.7.2",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^6.0.1"
     },
     "optionalDependencies": {
         "bufferutil": "^4.0.8",
